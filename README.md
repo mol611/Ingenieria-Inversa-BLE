@@ -70,6 +70,19 @@ A diferencia del pulso, la batería no requiere decodificación de banderas. Se 
 
 ---
 
+## 📱 Software de Referencia (Ingeniería de Software)
+
+Para la validación inicial y el análisis de la lógica de banderas, se utilizó el proyecto de código abierto **Pulsar**. Debido al tamaño del archivo APK, no se incluye el binario en este repositorio.
+
+### 🛠️ Generación del APK de Prueba
+Si deseas replicar las pruebas de validación en Android:
+1. Dirígete al repositorio original: [Pulsar por dsvi](https://github.com/dsvi/Pulsar/tree/main).
+2. Clona el proyecto y ábrelo en **Android Studio**.
+3. Compila el proyecto para generar tu propio archivo APK.
+4. **Nota técnica:** En el código fuente de este repositorio se encuentran pre-configuradas las constantes, UUIDs y el manejo de bits de las banderas que sirvieron de base para la implementación final en el **ESP32**.
+
+---
+
 ## ⚙️ Instalación y Uso
 
 ### 🛠️ ESP32
