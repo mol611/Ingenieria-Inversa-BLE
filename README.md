@@ -37,20 +37,27 @@ Basado en el análisis de lógica Kotlin para entender el **Flags Byte**:
 
 Flujo:
 1. **Escaneo:** Filtra por nombre `H6M 08012`.
-2. **Conexión:** Se vincula al Service `0x180D`.
+2. **Conexión:** Se vincula al Service `0x180D` (Heart Rate) y `0x180F` (Battery).
 3. **Suscripción:** Activa notificaciones en la Characteristic `0x2A37`.
 4. **Decodificación:** Procesa el payload en tiempo real (BPM + RR).
-5. **Batería:** Lectura síncrona cada 5 segundos del Service `0x180F`.
+5. **Batería:** Lectura síncrona cada 5 segundos de la Characteristic `0x2A19`.
 
 ---
 
-## 📊 Estructura de la Trama (Payload 0x2A37)
+## 📊 Estructura de Decodificación
 
+### 💓 Frecuencia Cardíaca (Notificación 0x2A37)
 | Posición | Campo | Descripción |
 |----------|-------|-------------|
 | Byte 0 | Flags | Define qué datos vienen en el paquete |
 | Byte 1 | BPM | Frecuencia cardíaca (8-bit) |
 | Byte 2-N | RR-Intervals | Pares de bytes con la variabilidad (16-bit) |
+
+### 🔋 Nivel de Batería (Lectura 0x2A19)
+A diferencia del pulso, la batería no requiere decodificación de banderas. Se basa en el estándar **Battery Service**:
+- **Formato:** UINT8.
+- **Rango:** 0 a 100 (representa el porcentaje directamente).
+- **Método:** El ESP32 solicita una lectura síncrona (`readValue`) y toma el primer byte del buffer.
 
 ---
 
