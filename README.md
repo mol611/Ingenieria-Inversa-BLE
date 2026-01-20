@@ -19,7 +19,7 @@ Proyecto de análisis y extracción de datos biométricos mediante **Ingeniería
 ## 🧠 Arquitectura del Flujo de Trabajo
 
 ### ✅ 1. Auditoría Física (Sniffing)
-- **Componentes:** nRF51822 + Wireshark.
+- **Componentes:** nRF51822.
 - **Logro:** Captura de paquetes de anuncio y validación de MAC `DF:3D:29:04:15:CF`.
 - **Limitación:** Solo se capturó el tráfico de anuncio; la lógica de datos se derivó del análisis de software.
 
@@ -56,7 +56,7 @@ Flujo:
 
 ## 📂 Estructura del Repositorio
 
-/Documentacion → Reporte técnico LaTeX + Capturas Wireshark
+/Documentacion → Reporte técnico LaTeX
 /Software-Analysis → Lógica de decodificación Kotlin
 /final.ino → Firmware para ESP32
 /README.md → Guía del proyecto
@@ -73,7 +73,6 @@ Flujo:
 
 ### 🔍 Validación con Sniffer
 - Conectar nRF51822.
-- Abrir Wireshark con el plugin de Nordic.
 - Filtrar por la dirección MAC del monitor para observar el proceso de Advertising.
 
 ---
@@ -82,5 +81,6 @@ Flujo:
 
 | Integrante | Universidad de Cuenca |
 |-----------|-----------------------|
-| Evelyn Nayeli Cabrera Jara | Facultad de Ingeniería |
-| John Rogelio Molina León | Ingeniería en Electrónica y Telecomunicaciones |
+| Karla Victoria Barrera Saavedra | Facultad de Ingeniería |
+| John Rogelio Molina León | Facultad de Ingeniería |
+| Luis Alejandro Monge Lojano | Facultad de Ingeniería |
