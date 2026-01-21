@@ -20,7 +20,7 @@ Proyecto de análisis y extracción de datos biométricos mediante **Ingeniería
 
 ### ✅ 1. Auditoría Física (Sniffing)
 - **Componentes:** nRF51822.
-- **Logro:** Captura de paquetes de anuncio y validación de MAC `DF:3D:29:04:15:CF`.
+- **Logro:** Captura de paquetes de anuncio y validación de MAC.
 - **Limitación:** Solo se capturó el tráfico de anuncio; la lógica de datos se derivó del análisis de software.
 
 ---
